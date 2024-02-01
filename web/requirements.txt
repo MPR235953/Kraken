@@ -1,0 +1,13 @@
+Dash
+dash_daq
+dash-bootstrap-components
+tensorflow
+tensorflow-io
+tensorflow[and-cuda]
+pandas
+pandas-ta
+numpy
+scikit-learn
+matplotlib
+mysql-connector-python
+SQLAlchemy

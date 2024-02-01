@@ -1,0 +1,34 @@
+.rc-slider-track {
+  background-color: var(--ls-increasing-color);
+}
+
+.rc-slider-rail {
+  background-color: var(--ls-grid-color);
+}
+
+.rc-slider-dot-active {  
+  border-color: var(--ls-increasing-color);
+}
+
+.rc-slider-dot{
+  background-color: var(--ls-grid-color);
+  border-color: var(--ls-increasing-color);
+}
+
+.rc-slider-handle {
+  background-color: var(--ls-grid-color);
+  border-color: var(--ls-increasing-color);
+}
+
+.rc-slider-handle-click-focused:focus {
+  background-color: var(--ls-grid-color);
+  border-color: var(--ls-increasing-color);
+}
+
+.rc-slider-handle:hover {
+  border-color: var(--ls-increasing-color);
+}
+
+.rc-slider-handle-active:active {
+  border-color: var(--ls-increasing-color);
+}

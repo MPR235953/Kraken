@@ -1,0 +1,54 @@
+version: '3.4'
+
+services:
+
+  mysql-container:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=root
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - website-mysql
+      - api-mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 10
+
+  api-container:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    depends_on:
+      mysql-container:
+        condition: service_healthy
+    networks:
+      - api-mysql
+    healthcheck:
+      test: ["CMD", "grep", "SUCCESS", "loader_log.txt"]
+      timeout: 5s
+      retries: 10
+
+  website-container:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "8050:8050"
+    depends_on:
+      mysql-container:
+        condition: service_healthy
+      api-container:
+        condition: service_healthy
+    networks:
+      - website-mysql
+
+networks:
+  website-mysql:
+  api-mysql:

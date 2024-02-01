@@ -1,0 +1,49 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--ls-background-color);
+    color: var(--ls-text-color);
+    font-family: ubuntu;
+}
+
+.ls-navbar{
+    background-color: var(--ls-tile-color);
+    border-radius: 0px 0px 50px 50px;
+}
+
+
+.ls-tile{
+    background-color: var(--ls-tile-color);
+    border-radius: 20px;
+    height: 100%;
+}
+
+.g-3 {
+    margin: 0.5rem;
+}
+
+.ls-loading-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.ls-toast-container{
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+}
+
+.ls-spinner-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

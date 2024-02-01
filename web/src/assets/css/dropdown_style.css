@@ -1,0 +1,28 @@
+.Select{
+    border: none !important;
+    outline: none !important;
+    background-color: var(--ls-tile-color) !important;
+}
+
+.Select-control {
+    background-color: var(--ls-tile-color) !important;
+    border: 2px solid var(--ls-text-color);
+}
+
+.Select-control,
+.Select-value,
+.Select-placeholder,
+.Select-value-label,
+.Select-clear-zone,
+.Select-arrow {
+    color: var(--ls-text-color) !important;
+}
+
+.VirtualizedSelectOption {
+    background-color: var(--ls-tile-color);
+    color: var(--ls-text-color);
+ }
+
+.VirtualizedSelectFocusedOption {
+    opacity: .8;
+}

@@ -1,0 +1,14 @@
+:root {
+    --ls-pink: #ff0aeb;
+    --ls-background-color: #011627;
+    --ls-text-color: #dddddd;
+    --ls-tile-color: #010c16;
+    --ls-decreasing-color: #f71735;
+    --ls-neutral-color: #00a1b6;
+    --ls-increasing-color: #42eb91;
+    --ls-transparent-color: rgba(0,0,0,0);
+    --ls-grid-color: #082b47;
+    --ls-decreasing-disabled-color: #2c2c2c;
+    --ls-neutral-disabled-color: #666666;
+    --ls-increasing-disabled-color: #afafaf;
+}

@@ -1,0 +1,4 @@
+yfinance
+mysql-connector-python
+SQLAlchemy
+pandas
