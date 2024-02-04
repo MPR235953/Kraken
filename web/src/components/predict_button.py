@@ -72,10 +72,11 @@ def click_predict_button(n_clicks: int, currencies_store: any, method_store: any
     if not all([currencies_store, method_store, predict_days_store]):
         raise PreventUpdate
 
-    query = "SELECT * FROM eur_pln"
+    curr_pair = f"{currencies_store[0].lower()}_{currencies_store[1].lower()}"
+    query = f"SELECT * FROM {curr_pair}"
     df = pd.read_sql_query(query, engine)
 
-    forecast = forecaster.get_forecast(df=df, days=predict_days_store, time_step=7)
+    forecast = forecaster.get_forecast(df=df, days=predict_days_store, curr_pair=curr_pair, time_step=7)
     next_days = list(np.reshape(forecast, (forecast.shape[0])))
 
     start_day = df.tail(1)["Date"].values[0] + timedelta(days=1)

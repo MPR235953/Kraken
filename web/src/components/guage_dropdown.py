@@ -21,4 +21,5 @@ def create_guage_dropdown(id: str):
         style=dropdown_style,
         options=option_list,
         value=option_list[0],
+        clearable=False,
     )

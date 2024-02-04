@@ -3,13 +3,13 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
-def get_forecast(df, days: int, time_step: int = 7):
+def get_forecast(df, days: int, curr_pair: str, time_step: int = 7):
     data = df[['Close']].values[-30:]
 
     scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_data = scaler.fit_transform(data)
 
-    model = tf.keras.models.load_model("src/models/20240120-181519_LSTM_y15_sl7_b256_e10_L512-256-128-64_D64-32-16-1_d0-0-0-0-0-0-0-0")
+    model = tf.keras.models.load_model(f"src/models/final_LSTM_{curr_pair}_sl7_b256_e100_L512-256-128-64_D64-32-16-1_d0-0-0-0-0-0-0-0")
 
     seq = np.reshape(scaled_data[-time_step:], (1, time_step, 1))
     next_days = []
