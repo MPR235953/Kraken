@@ -1,12 +1,13 @@
 Dash==2.15.0
-dash_daq==0.5.0
 dash-bootstrap-components==1.5.0
+dash_daq==0.5.0
 tensorflow==2.15.0.post1
 tensorflow[and-cuda]==2.15.0.post1
 pandas==2.2.0
 pandas-ta==0.3.14b0
-numpy==1.26.3
-scikit-learn==1.4.0
+yfinance==0.2.36
 matplotlib==3.8.2
+scikit-learn==1.4.0
+numpy==1.26.3
 mysql-connector-python==8.3.0
 SQLAlchemy==2.0.25
