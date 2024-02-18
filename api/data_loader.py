@@ -17,8 +17,8 @@ def add_log(is_success: bool, msg: str = ""):
 if __name__ == '__main__':
     try:
         currency_mapper = {
-            "pln_usd": "PLN=x",
-            "usd_pln": "PLNUSD=x",
+            "pln_usd": "PLNUSD=x",
+            "usd_pln": "PLN=x",
             "eur_pln": "EURPLN=x",
             "pln_eur": "PLNEUR=x",
             "eur_usd": "EURUSD=x",
